@@ -10,9 +10,8 @@ int main()
 
     while (t--)
     {
-        int x;
         long double m;
-        cin >> x >> m;
+        cin >> m;
         int y = floor(m);
         long double z = m - y;
         while (true)
@@ -27,7 +26,6 @@ int main()
             }
         }
         int myInt = static_cast<int>(z);
-        // cout << (x + myInt) << "." << (x + y) << endl;
     }
     return 0;
 }
