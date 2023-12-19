@@ -7,8 +7,15 @@ using lli = long long;
 lli mod = 1000000007;
 
 
-lli binpow(lli a,lli b,lli mod){
-    // implement a^b%mod
+lli binpow(lli a, lli b, lli mod) {
+    if (b == 0) return 1;
+    
+    if (b % 2) {
+        return (a * binpow(a, b - 1, mod)) % mod;
+    } else {
+        lli temp = binpow(a, b / 2, mod);
+        return (temp * temp) % mod;
+    }
 }
 
 int main() {
